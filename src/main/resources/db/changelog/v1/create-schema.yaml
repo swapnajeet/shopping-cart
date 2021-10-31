@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01-create-schema
+      author: Swapnajeet Singh
+      changes:
+        - sqlFile:
+            endDelimiter: ;
+            path: sql/schema.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true

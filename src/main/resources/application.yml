@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: 'db_user'
+    password: '8b3b91c7'
+    url: 'jdbc:mysql://localhost:3306/assessment'
+
+  liquibase:
+    enabled: true
+    url: 'jdbc:mysql://localhost:3306/assessment'
+    user: 'db_user'
+    password: '8b3b91c7'
+    clear-checksums: true
+    database-change-log-table: 'SHOPPING_CART_SCHEMA_CHANGE_LOG'
+    database-change-log-lock-table: 'SHOPPING_CART_SCHEMA_CHANGE_LOG_LOCK'
+  jpa:
+    properties:
+      hibernate:
+        search:
+          default:
+            directory_provider: 'filesystem'
+            indexbase: './lucene_idx'
+
+springdoc:
+  swagger-ui:
+    path: '/swagger-ui.html'
+  api-docs:
+    path: '/v1/api-docs'
+
+
+
