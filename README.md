@@ -78,3 +78,9 @@ For example to create a product:
 > -H "accept: */*" 
 > -H "Content-Type: application/json" 
 > -d "{\"name\":\"Test product\",\"description\":\"This product has been created from a test.\",\"price\":200}"
+
+### Free text search
+The application provides an api to search products by their name and the search supports pagination. This is available 
+in the api specification and below is an example of it from command line.
+
+> http://localhost:8080/api/v1/products/search/?textToSearch=Test&pageIndex=1&pageSize=10
